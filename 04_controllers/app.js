@@ -24,5 +24,16 @@
     $scope.spicy = function(spice) {
       $scope.spice = spice;
     }
-  }])
+  }]);
+  myApp.controller('MainController', ['$scope', function($scope) {
+    $scope.timeOfDay = 'morning';
+    $scope.name = 'Nikki';
+  }]);
+  myApp.controller('ChildController', ['$scope', function($scope) {
+    $scope.name = 'Mattie';
+  }]);
+  myApp.controller('GrandChildController', ['$scope', function($scope) {
+    $scope.timeOfDay = 'evening';
+    $scope.name = 'Gingerbread Baby';
+  }]);
 })();
