@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controller</title>
+</head>
+<p>Setting up the initial state of a $scope object</p>
+
+<body>
+  <div ng-controller="GreetingController">
+    {{ greeting }}
+  </div>
+  <p>Adding Behavior to a Scope Object</p>
+  <div ng-controller="DoubleController">
+    Two times <input ng-model="num"> equals {{ double(num)}}
+  </div>
+  <p>Simple Spicy Controller Example</p>
+  <div ng-controller="SpicyController">
+    <button ng-click="chiliSpicy()">Chili</button>
+    <button ng-click="jalapenoSpicy()">Jalapeño</button>
+    <p>The food is {{spice}} spicy!</p>
+  </div>
+  <p>Spicy Arguments Example</p>
+  <div ng-controller="SpicyController2">
+    <input ng-model="customSpice">
+    <button ng-click="spicy('chili')">Chili</button>
+    <button ng-click="spicy(customSpice)">Custom spice</button>
+    <p>The food is {{spice}} spicy!</p>
+  </div>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
