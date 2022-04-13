@@ -28,5 +28,17 @@
   app.controller('MyController', ['$scope', 'reverseFilter', function($scope, reverseFilter) {
     $scope.greeting = 'hello';
     $scope.filteredGreeting = reverseFilter($scope.greeting);
+  }]);
+  app.filter('decorate', ['decoration', function(decoration) {
+    function decorateFilter(input) {
+      return decoration.symbol + input + decoration.symbol;
+    }
+    decorateFilter.$stateful = true;
+    return decorateFilter;
   }])
+  app.controller('MyController2', ['$scope', 'decoration', function ($scope, decoration) {
+    $scope.greeting = 'hello';
+    $scope.decoration = decoration;
+  }])
+  .value('decoration', {symbol: '*'});
 })();
