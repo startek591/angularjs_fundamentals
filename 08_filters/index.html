@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filters</title>
+</head>
+<body>
+  <div ng-controller="FilterController as ctrl">
+    <div>
+      All entires:
+      <span ng-repeat="entry in ctrl.array">{{entry.name}} </span>
+    </div>
+    <div>
+      Entries that contain an "a":
+      <span ng-repeat="entry in ctrl.filteredArray">{{entry.name}}</span>
+    </div>
+  </div>
+  <p>Creating custom filters</p>
+  <div ng-controller="MyController">
+    <input ng-model="greeting" type="text"> <br>
+      No filter: {{greeting}}<br>
+      Reverse: {{greeting|reverse}}<br>
+      Reverse + uppercase: {{greeting|reverse:true}}<br>
+      Reverse, filtered in controller: {{filteredGreeting}}<br>
+  </div>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
