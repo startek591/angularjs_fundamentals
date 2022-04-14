@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components</title>
+</head>
+<body>
+  <p>Creating and configuring a Component</p>
+  <div ng-controller="MainCtrl as ctrl">
+    <b>Hero</b><br>
+    <hero-detail hero="ctrl.hero"></hero-detail>
+  </div>
+  <p>Example of a component tree</p>
+  <hero-list></hero-list>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="heroDetail.js"></script>
+  <script src="heroList.js"></script>
+  <script src="heroDetails.js"></script>
+  <script src="editableField.js"></script>
+</body>
+</html>
