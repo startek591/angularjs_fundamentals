@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normalization</title>
+</head>
+<body>
+  <p>Normalization</p>
+  <div ng-controller="Controller">
+    Hello <input ng-model='name'><hr/>
+    <span ng-bind="name"></span> <br/>
+    <span ng:bind="name"></span> <br/>
+    <span ng_bind="name"></span> <br/>
+    <span x-ng-bind="name"></span> <br />
+  </div>
+  <p>Template-expanding directive</p>
+  <div ng-controller="Controller2">
+    <div my-customer></div>
+  </div>
+  <p>Template-expanding directive</p>
+  <div ng-controller="Controller3">
+    <div my-customer2></div>
+  </div>
+  <p>Template-expanding directive</p>
+  <div ng-controller="Controller4">
+    <div my-customer3 type="name"></div>
+    <div my-customer3 type="address"></div>
+  </div>
+  <p>Template-expanding directive</p>
+  <div ng-controller="Controller5">
+    <my-customer4></my-customer4>
+  </div>
+  <p>Isolating the Scope of a Directive</p>
+  <div ng-controller="NaomiController">
+    <my-customer5></my-customer5>
+  </div>
+  <hr>
+  <div ng-controller="IgorController">
+    <my-customer5></my-customer5>
+  </div>
+  <div ng-controller="Controller6">
+    <my-customer6 info="naomi"></my-customer6>
+    <hr>
+    <my-customer6 info="igor"></my-customer6>
+  </div>
+  <p>Creating a Directive that Wraps Other Elements</p>
+  <div ng-controller="Controller7">
+    {{message}}
+    <my-dialog ng-hide="dialogIsHidden" on-close="hideDialog(message)">Check out the contents, {{name}}!</my-dialog>
+  </div>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
