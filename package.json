@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-ui-router": "^1.0.30",
+    "jquery": "^3.1.0"
+  }
 }
