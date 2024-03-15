@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Ng-repeat</title>
+  </head>
+  <body>
+    <h1>ng-repeat</h1>
+    <div ng-controller="ShoppingListController">
+      <h3>Array: Shopping List:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList1">{{item}}</li>
+      </ul>
+
+      <h3>Array of Objects: Shopping List:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList2">
+          Buy {{item.quantity}} of {{item.name}}
+        </li>
+      </ul>
+
+      <h3>Accessing arrays and array of objects</h3>
+      <input
+        type="text"
+        ng-model="newItemName"
+        placeholder="item name"
+      />
+      <input
+        type="text"
+        ng-model="newItemQuantity"
+        placeholder="item quantity"
+      />
+      <button ng-click="addToList()">Add To List</button>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
