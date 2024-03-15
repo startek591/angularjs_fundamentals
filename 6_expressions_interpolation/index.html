@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MsgApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Expressions and Interpolation</title>
+  </head>
+  <body>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="MsgController">
+      {{name}} has a message for you: <br />
+      {{sayMessage()}}
+      <div>
+        <button ng-click="feedJonathan()">Feed Jonathan</button>
+        <br />
+        <img
+          ng-src="images/{{stateOfBeing}}.jpeg"
+          width="200"
+          height="200"
+        />
+      </div>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
