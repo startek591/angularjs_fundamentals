@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Custom Service Through a Provider</title>
+  </head>
+  <body>
+    <h1>Custom Service Through a Provider</h1>
+    <div id="list" ng-controller="ShoppingListController as list">
+      <h3>Shopping List</h3>
+      <input
+        type="text"
+        ng-model="list.itemName"
+        placeholder="item name"
+      />
+      <input
+        type="text"
+        ng-model="list.itemQuantity"
+        placeholder="quantity"
+      />
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list.items">
+          {{ item.quantity }} of {{ item.name }}
+        </li>
+      </ol>
+      <div class="error">Error: {{list.errorMessage }}</div>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
