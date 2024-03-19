@@ -2,6 +2,7 @@
   angular
     .module('ShoppingListDirectiveApp', [])
     .controller('ShoppingListController1', ShoppingListController1)
+    .controller('ShoppingListController2', ShoppingListController2)
     .factory('ShoppingListFactory', ShoppingListFactory)
     .directive('listItem', ListItem)
     .directive('listItemDescription', ListItemDescription);
@@ -32,6 +33,28 @@
 
     list.addItem = function () {
       shoppingList.addItem(list.itemName, list.itemQuantity);
+    };
+
+    list.removeItem = function (itemIndex) {
+      shoppingList.removeItem(itemIndex);
+    };
+  }
+
+  ShoppingListController2.$inject = ['ShoppingListFactory'];
+  function ShoppingListController2(ShoppingListFactory) {
+    let list = this;
+
+    const shoppingList = ShoppingListFactory(3);
+
+    list.itemName = '';
+    list.itemQuantity = '';
+
+    list.addItem = function () {
+      try {
+        shoppingList.addItem(list.itemName, list.itemQuantity);
+      } catch (error) {
+        list.errorMessage = error.message;
+      }
     };
 
     list.removeItem = function (itemIndex) {
