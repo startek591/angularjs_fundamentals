@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListDirectiveApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Directive with Isolate Scope and '&'</title>
+  </head>
+  <body>
+    <h1>Directives with Isolate Scope and '&'</h1>
+    <div ng-controller="ShoppingListController as list">
+      <input
+        type="text"
+        ng-model="list.itemName"
+        placeholder="item name"
+      />
+      <input
+        type="text"
+        ng-model="list.itemQuantity"
+        placeholder="quantity"
+      />
+      <button ng-click="list.addItem();">Add Item</button>
+      <span>{{ list.lastRemoved }}</span>
+
+      <shopping-list
+        items="list.items"
+        title="{{list.title}}"
+        bad-remove="list.removeItem"
+        on-remove="list.removeItem(index)"
+      ></shopping-list>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
