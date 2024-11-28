@@ -18,6 +18,8 @@ module.exports = function (config) {
       '04_Controllers/app.spec.js',
       '05_Controllers/app.js',
       '05_Controllers/app.spec.js',
+      '06_Controllers/app.js',
+      '06_Controllers/app.spec.js',
     ],
 
     // list of files / patterns to exclude
