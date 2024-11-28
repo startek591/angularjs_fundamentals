@@ -16,6 +16,8 @@ module.exports = function (config) {
       'node_modules/angular-mocks/angular-mocks.js',
       '04_Controllers/app.js',
       '04_Controllers/app.spec.js',
+      '05_Controllers/app.js',
+      '05_Controllers/app.spec.js',
     ],
 
     // list of files / patterns to exclude

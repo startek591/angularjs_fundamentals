@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Spicy Arguments Example</title>
+  </head>
+  <body>
+    <div ng-app="spicyApp2" ng-controller="SpicyController">
+      <input ng-model="customSpice" />
+      <button ng-click="spicy('chili')">Chili</button>
+      <button ng-click="spicy(customSpice)">Custom spice</button>
+      <p>The food is {{spice}} spicy!</p>
+    </div>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
