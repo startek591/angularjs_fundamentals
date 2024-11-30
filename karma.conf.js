@@ -22,6 +22,8 @@ module.exports = function (config) {
       '06_Controllers/app.spec.js',
       '07_Services/script.js',
       '07_Services/script.spec.js',
+      '08_Scopes/script.js',
+      '08_Scopes/script.spec.js',
     ],
 
     // list of files / patterns to exclude
