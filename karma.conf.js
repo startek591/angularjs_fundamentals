@@ -28,6 +28,8 @@ module.exports = function (config) {
       '09_Scopes/script.spec.js',
       '11_Expressions/script.js',
       '11_Expressions/script.spec.js',
+      '12_Expression_Context/script.js',
+      '12_Expression_Context/script.spec.js',
     ],
 
     // list of files / patterns to exclude
