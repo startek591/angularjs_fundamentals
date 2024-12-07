@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FilterInControllerModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Filter</title>
+  </head>
+  <body>
+    <div ng-controller="FilterController as ctrl">
+      <div>
+        All entries:
+        <span ng-repeat="entry in ctrl.array">{{entry.name}}</span>
+      </div>
+      <div>
+        Entries that contain an "a":
+        <span ng-repeat="entry in ctrl.filteredArray"
+          >{{entry.name}}</span
+        >
+      </div>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -32,6 +32,8 @@ module.exports = function (config) {
       '12_Expression_Context/script.spec.js',
       '13_One_time_binding/script.js',
       '13_One_time_binding/script.spec.js',
+      '14_filter/script.js',
+      '14_filter/script.spec.js',
     ],
 
     // list of files / patterns to exclude
